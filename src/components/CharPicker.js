@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import './CharPicker.css';
 
@@ -38,17 +38,20 @@ class CharPicker extends Component {
       this.state.characters.length > 0
     ) {
       content = (
-        <select
-          onChange={this.props.onCharSelect}
-          value={this.props.selectedChar}
-          className={this.props.side}
-        >
-          {this.state.characters.map(char => (
-            <option key={char.id} value={char.id}>
-              {char.name}
-            </option>
-          ))}
-        </select>
+        <Fragment>
+          <div>Select a charecter:</div>
+          <select
+            onChange={this.props.onCharSelect}
+            value={this.props.selectedChar}
+            className={this.props.side}
+          >
+            {this.state.characters.map(char => (
+              <option key={char.id} value={char.id}>
+                {char.name}
+              </option>
+            ))}
+          </select>
+        </Fragment>
       );
     } else if (
       !this.state.isLoading &&

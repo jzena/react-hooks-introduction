@@ -26,6 +26,7 @@ class App extends Component {
   render() {
     let content = (
       <React.Fragment>
+        <h1>React - Class components</h1>
         <CharPicker
           side={this.state.side}
           selectedChar={this.state.selectedCharacter}
