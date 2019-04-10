@@ -23,7 +23,7 @@ const App = props => {
 
     let content = (
       <React.Fragment>
-        <h1>React - Hook intro</h1>
+        <h1>React - Hook custom (share data between components)</h1>
         <CharPicker
           side={chosenSide}
           selectedChar={selectedCharacter}
